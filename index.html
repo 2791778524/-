@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .banner{
+
+        .banner {
             background: #ccc;
             color: #fff;
         }
-        li{
+
+        li {
             list-style: none;
         }
-        @media screen and (max-width:768px){
-            .banner li{
+
+        @media screen and (max-width:768px) {
+            .banner li {
                 height: 30px;
                 line-height: 30px;
                 text-align: left;
                 padding-left: 20px;
                 margin-bottom: 10px;
             }
+
             .ImageArea li {
                 height: 20vh;
                 line-height: 20vh;
@@ -35,14 +39,16 @@
                 margin-bottom: 20px;
             }
         }
-        @media screen and (min-width:768px){
-            .banner li{
+
+        @media screen and (min-width:768px) {
+            .banner li {
                 height: 30px;
                 line-height: 30px;
                 text-align: left;
                 padding-left: 20px;
                 margin-bottom: 10px;
             }
+
             .ImageArea li {
                 height: 20vh;
                 line-height: 20vh;
@@ -52,24 +58,29 @@
                 margin-bottom: 20px;
             }
         }
-        @media screen and (min-width:1000px){
-            .banner{
-                height: 44px; 
+
+        @media screen and (min-width:1000px) {
+            .banner {
+                height: 44px;
                 line-height: 44px;
             }
-            .list{
+
+            .list {
                 display: flex;
                 justify-content: space-around;
             }
-            .list li{
+
+            .list li {
                 height: 44px;
                 line-height: 44px;
                 text-align: center;
             }
-            .ImageArea{
+
+            .ImageArea {
                 overflow: hidden;
             }
-            .ImageArea li{
+
+            .ImageArea li {
                 float: left;
                 height: 10vh;
                 line-height: 10vh;
@@ -83,6 +94,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="banner">
@@ -128,19 +140,23 @@
 <script>
     let dom = document.documentElement.getElementsByClassName('container')[0]
     let isShow = true
-    dom.onclick=function() {
-        if(isShow)
-        {
+    dom.onclick = function () {
+        if (isShow) {
             dom.style.opacity = 0
             isShow = false
             console.log('点击隐藏container');
         } else {
-            dom.style = {
-                opacity: 1,
-            }
+            dom.style.opacity = 1
             isShow = true
             console.log('点击显示container');
         }
     }
+    /* dom.onmouseover = function () {
+        console.log('鼠标移入打印');
+    }
+    dom.onmouseout = function () {
+        console.log('鼠标移出打印');
+    } */
 </script>
+
 </html>

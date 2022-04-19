@@ -126,6 +126,21 @@
     </div>
 </body>
 <script>
-    
+    let dom = document.documentElement.getElementsByClassName('container')[0]
+    let isShow = true
+    dom.onclick=function() {
+        if(isShow)
+        {
+            dom.style.opacity = 0
+            isShow = false
+            console.log('点击隐藏container');
+        } else {
+            dom.style = {
+                opacity: 1,
+            }
+            isShow = true
+            console.log('点击显示container');
+        }
+    }
 </script>
 </html>
